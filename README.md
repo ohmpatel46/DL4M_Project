@@ -1,6 +1,5 @@
 # Speech Audio Source Seperation
 
-Speech Audio Source Seperation 
 DL4M Group 6 - Ohm Patel, Emily Wang, Yilin Wang
 
 ## Introduction
