@@ -4,7 +4,7 @@ Speech Audio Source Seperation
 DL4M Group 6 - Ohm Patel, Emily Wang, Yilin Wang
 
 ## Introduction
-Motivation: Our project is based on the cocktail party problem. Based on real-life scenarios such as multiple people talking simultaneously at a party, this problem is often used to train and evaluate audio source separation models. Our models have a variety of applications such as separating political speakers speaking over one another and distinguishing a user’s voice from other people.
+Our project is based on the cocktail party problem. Based on real-life scenarios such as multiple people talking simultaneously at a party, this problem is often used to train and evaluate audio source separation models. Our models have a variety of applications such as separating political speakers speaking over one another and distinguishing a user’s voice from other people.
 
 ## Dataset
 
@@ -47,4 +47,8 @@ Replace `myenv` with the name of your environment.
 
 5. Start working on the project!
 
-
+## Model
+We plan to make architectural changes to an existing model called ConvTasNet. It uses a linear encoder to generate a representation of the speech waveform optimized for separating individual speakers. 
+Audio Source Separation: The model provides us with 2 source separated audio clips.
+Transcript Generation: We use a pre-trained model on the separated audio clips to generate their transcripts.
+Evaluation: The performance metric that is most appropriate for this task is SI-SDR (Scale invariant- Source to Distortion ratio). It measures the ratio between the power of the source signal to the distortion introduced by the source separation.
