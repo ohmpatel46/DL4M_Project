@@ -1,7 +1,10 @@
-# Project Title
+# Speech Audio Source Seperation
 
 Speech Audio Source Seperation 
 DL4M Group 6 - Ohm Patel, Emily Wang, Yilin Wang
+
+## Introduction
+Motivation: Our project is based on the cocktail party problem. Based on real-life scenarios such as multiple people talking simultaneously at a party, this problem is often used to train and evaluate audio source separation models. Our models have a variety of applications such as separating political speakers speaking over one another and distinguishing a user’s voice from other people.
 
 ## Dataset
 
