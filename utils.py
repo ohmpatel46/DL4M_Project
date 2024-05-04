@@ -3,6 +3,7 @@ import random
 import librosa
 import numpy as np
 import soundfile as sf
+import torch
 
 def load_audio(file_path):
     waveform, sample_rate = librosa.load(file_path, sr=None, mono=True)
@@ -18,8 +19,9 @@ def merge_audio(audio1, audio2):
 def generate_data(output_dir, librispeech_dir):
     speaker_dirs = [os.path.join(librispeech_dir, speaker) for speaker in os.listdir(librispeech_dir) if os.path.isdir(os.path.join(librispeech_dir, speaker))]
     for i, speaker_dir1 in enumerate(speaker_dirs):
-        if i==0 or i==1:
-            continue
+        #The below line was used to generate test data that is different from training data
+        # if i==0 or i==1:
+        #     continue
         for speaker_dir2 in speaker_dirs[i+1:]:
             # Get list of chapter directories for each speaker
             chapter_dirs1 = [os.path.join(speaker_dir1, chapter) for chapter in os.listdir(speaker_dir1) if os.path.isdir(os.path.join(speaker_dir1, chapter))]
@@ -51,9 +53,10 @@ def generate_data(output_dir, librispeech_dir):
                 output_path = os.path.join(output_dir, output_file)
                 # librosa.output.write_wav(output_path, merged_audio, sr1)
                 sf.write(output_path, merged_audio, sr1)
-            if i>2:
+            # The below lines are written to limit the number of samples in our dataset
+            if i>0:
                 break
-        if i>2:
+        if i>0:
             break
     # Returns number of files generated
     return len(os.listdir(output_dir))
