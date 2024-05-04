@@ -7,8 +7,8 @@ Our project is based on the cocktail party problem. Based on real-life scenarios
 
 ## Dataset
 
-- [LibriSpeech Corpus](https://www.openslr.org/12) - Description of dataset 1.
-- [LibriMix Dataset](https://github.com/JorisCos/LibriMix) - Description of dataset 2.
+- [LibriSpeech Corpus](https://www.openslr.org/12) - The LibriSpeech corpus is a collection of approximately 1,000 hours of audiobooks that are a part of the LibriVox project. Most of the audiobooks come from the Project Gutenberg. The training data is split into 3 partitions of 100hr, 360hr, and 500hr sets while the dev and test data are split into the ’clean’ and ’other’ categories, respectively, depending upon how well or challenging Automatic Speech Recognition systems would perform against. Each of the dev and test sets is around 5hr in audio length. This corpus also provides the n-gram language models and the corresponding texts excerpted from the Project Gutenberg books, which contain 803M tokens and 977K unique words.
+- [LibriMix Dataset](https://github.com/JorisCos/LibriMix) - LibriMix is an open-source alternative to wsj0-2mix. Based on LibriSpeech, LibriMix consists of two- or three-speaker mixtures combined with ambient noise samples from WHAM!.
 
 ## Reference Papers
 
